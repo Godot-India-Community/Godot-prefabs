@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://robo/idle-01.png" type="Texture" id=1]
+[ext_resource path="res://Robo/robo/idle-01.png" type="Texture" id=1]
 [ext_resource path="res://Robo/Robo.gd" type="Script" id=2]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.1625
