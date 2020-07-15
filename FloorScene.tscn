@@ -6,7 +6,6 @@
 extents = Vector2( 296, 10 )
 
 [node name="Floor" type="StaticBody2D"]
-position = Vector2( 582.945, 470.057 )
 __meta__ = {
 "_edit_group_": true
 }
