@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.0148148, 0.133333, 0.303704, 0.451852, 0.7, 0.911111 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.03125, 1, 0, 1, 0.976562, 0.237644, 0.0114441, 1, 1, 0, 0.94047, 1, 0, 1, 1, 1, 0.929412, 0.960784, 0.00784314, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 1.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 10.0
+radial_accel = 10.0
+color_ramp = SubResource( 2 )
+
+[node name="Confretti" type="Particles2D"]
+emitting = false
+amount = 500
+one_shot = true
+explosiveness = 0.75
+process_material = SubResource( 3 )
