@@ -14,14 +14,14 @@ func _physics_process(delta):
 	linear_velocity = move_and_slide(linear_velocity, UP_DIRECTION, false)
 	
 	var target_speed = 0
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("ui_left"):
 		target_speed -= 1
 		$sprite.scale.x = -1
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("ui_right"):
 		target_speed += 1
 		$sprite.scale.x = 1
 		
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
 		linear_velocity.y = -jump_height
 	
 	target_speed *= walk_speed
