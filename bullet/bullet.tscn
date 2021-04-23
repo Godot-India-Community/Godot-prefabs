@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/spy_duck/pistol/bullet/script.gd" type="Script" id=1]
+[ext_resource path="res://resources/sprites/shapes/box.png" type="Texture" id=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -3.04734, 0.0437374 )
+b = Vector2( 3.03931, 0.0322971 )
+
+[node name="bullet" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="square" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.05 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
